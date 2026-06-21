@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: file-service
+  flyway:
+    enabled: false
+  mongodb:
+    auto-index-creation: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+server:
+  servlet:
+    context-path: /rest
+  port: 8087

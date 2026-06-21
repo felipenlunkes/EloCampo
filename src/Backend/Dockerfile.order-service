@@ -1,0 +1,27 @@
+FROM eclipse-temurin:25-jdk AS builder
+
+# --- Publish account-service-contract ---
+WORKDIR /build/account-contract
+COPY account-service/account-service-contract ./account-service-contract
+COPY account-service/gradle ./gradle
+COPY account-service/gradlew .
+RUN printf 'rootProject.name = "account-service"\ninclude("account-service-contract")\n' > settings.gradle.kts
+RUN chmod +x gradlew && ./gradlew :account-service-contract:publishToMavenLocal --no-daemon
+
+# --- Publish product-service-contract ---
+WORKDIR /build/product-contract
+COPY product-service/product-service-contract ./product-service-contract
+COPY product-service/gradle ./gradle
+COPY product-service/gradlew .
+RUN printf 'rootProject.name = "product-service"\ninclude("product-service-contract")\n' > settings.gradle.kts
+RUN chmod +x gradlew && ./gradlew :product-service-contract:publishToMavenLocal --no-daemon
+
+# --- Build order-service ---
+WORKDIR /build/order-service
+COPY order-service .
+RUN chmod +x gradlew && ./gradlew :order-service-impl:bootJar --no-daemon && \
+    find ./order-service-impl/build/libs -name "*.jar" ! -name "*-plain.jar" -exec cp {} ./app.jar \;
+
+FROM eclipse-temurin:25-jre
+COPY --from=builder /build/order-service/app.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]

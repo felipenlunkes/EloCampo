@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "8720d914-8b95-41cb-b49e-2affe1051f3e",
+		"name": "account-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28758213",
+		"_collection_link": "https://interstellar-robot-632943.postman.co/workspace/EloCampo~7047c98d-3ca1-4dd1-a81e-53d34058097d/collection/28758213-8720d914-8b95-41cb-b49e-2affe1051f3e?action=share&source=collection_link&creator=28758213"
+	},
+	"item": [
+		{
+			"name": "Find by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/rest/v1/account/:userId",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"rest",
+						"v1",
+						"account",
+						":userId"
+					],
+					"variable": [
+						{
+							"key": "userId",
+							"value": "019cf8b1-75dc-792b-9953-ccb4e79f29e2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"ff74a53b-1a70-4c47-b7d5-18b20fc91795\",\n    \"name\": \"Felipe Lunkes\",\n    \"cpf\": \"12216523665\",\n    \"birthdayDate\": 1755552556365,\n    \"role\": \"VENDOR\",\n    \"address\": {\n        \"street\": \"Avenida do Contorno\",\n        \"number\": \"2000A\",\n        \"city\": \"Belo Horizonte\",\n        \"district\": \"Centro\",\n        \"complement\": \"Loja 2\",\n        \"state\": \"MG\",\n        \"postalCode\": \"1212121212\"\n    },\n    \"phone\": {\n        \"number\": \"99999999\",\n        \"stateCode\": \"31\",\n        \"countryCode\": \"55\"\n    }\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/rest/v1/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"rest",
+						"v1",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"ff74a53b-1a70-4c47-b7d5-18b20fc91798\",\n    \"name\": \"Felipe Lunkes\",\n    \"cpf\": \"12216523665\",\n    \"birthdayDate\": 1755552556365,\n    \"role\": \"VENDOR\",\n    \"address\": {\n        \"street\": \"Avenida do Contorno\",\n        \"number\": \"2000A\",\n        \"city\": \"Belo Horizonte\",\n        \"district\": \"Centro\",\n        \"complement\": \"Loja 2\",\n        \"postalCode\": \"1212121212\",\n        \"state\": \"Minas Gerais\"\n    },\n    \"phone\": {\n        \"number\": \"99999999\",\n        \"stateCode\": \"31\",\n        \"countryCode\": \"55\"\n    }\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{service-url}}/rest/v1/account/:accountId",
+					"host": [
+						"{{service-url}}"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"account",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{service-url}}/rest/v1/account/:accountId/deactivate",
+					"host": [
+						"{{service-url}}"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"account",
+						":accountId",
+						"deactivate"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{service-url}}/rest/v1/account/:accountId/activate",
+					"host": [
+						"{{service-url}}"
+					],
+					"path": [
+						"rest",
+						"v1",
+						"account",
+						":accountId",
+						"activate"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

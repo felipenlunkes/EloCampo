@@ -1,0 +1,15 @@
+spring:
+  mongodb:
+    uri: mongodb://root:admin12345@localhost:27017/elocampo?authSource=admin
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+server:
+  port: 8082
+
+services:
+  account-service:
+    url: http://localhost:8081

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: auth-service
+  flyway:
+    enabled: false
+  mongodb:
+    auto-index-creation: true
+server:
+  servlet:
+    context-path: /rest
+
+token:
+  jwt-secret: "QNyrmdUkpqi+Z7rPCrigN3dvLwbwxNz33d5r2STdr2M="
+  expiration-days: 3

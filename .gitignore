@@ -1,0 +1,23 @@
+src/Backend/data
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Gradle ###
+.gradle/
+build/
+**/build/
+**/.*gradle/
+
+### Backend ###
+src/Backend/.pids
+src/Backend/logs
+
+### Frontend ###
+src/Frontend/node_modules
