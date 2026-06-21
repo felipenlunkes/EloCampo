@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: order-service
-server:
-  servlet:
-    context-path: /rest
