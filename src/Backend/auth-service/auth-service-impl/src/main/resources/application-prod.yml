@@ -1,0 +1,20 @@
+spring:
+  mongodb:
+    uri: ${MONGODB_URI}
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: ${KAFKA_BROKERS}
+
+server:
+  port: ${PORT:8080}
+
+token:
+  jwt-secret: ${JWT_SECRET}
+
+services:
+  account-service:
+    url: ${ACCOUNT_SERVICE_URL:http://account-service}
+  message-service:
+    url: ${MESSAGE_SERVICE_URL:http://message-service}

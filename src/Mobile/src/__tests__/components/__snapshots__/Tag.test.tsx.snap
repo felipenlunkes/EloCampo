@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag corresponde ao snapshot para cada variante 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 999,
+        "borderWidth": 0.5,
+        "paddingHorizontal": 7,
+        "paddingVertical": 2,
+      },
+      {
+        "backgroundColor": "#122114",
+        "borderColor": "#264d29",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 10,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#6dbf74",
+        },
+      ]
+    }
+  >
+    green
+  </Text>
+</View>
+`;
+
+exports[`Tag corresponde ao snapshot para cada variante 2`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 999,
+        "borderWidth": 0.5,
+        "paddingHorizontal": 7,
+        "paddingVertical": 2,
+      },
+      {
+        "backgroundColor": "#2e2410",
+        "borderColor": "#b8882b",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 10,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#e8b84b",
+        },
+      ]
+    }
+  >
+    amber
+  </Text>
+</View>
+`;
+
+exports[`Tag corresponde ao snapshot para cada variante 3`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 999,
+        "borderWidth": 0.5,
+        "paddingHorizontal": 7,
+        "paddingVertical": 2,
+      },
+      {
+        "backgroundColor": "#0d1f2e",
+        "borderColor": "#1a4060",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 10,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#70aadd",
+        },
+      ]
+    }
+  >
+    blue
+  </Text>
+</View>
+`;
+
+exports[`Tag corresponde ao snapshot para cada variante 4`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 999,
+        "borderWidth": 0.5,
+        "paddingHorizontal": 7,
+        "paddingVertical": 2,
+      },
+      {
+        "backgroundColor": "#3a1010",
+        "borderColor": "#7a2020",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 10,
+          "fontWeight": "500",
+        },
+        {
+          "color": "#e07070",
+        },
+      ]
+    }
+  >
+    red
+  </Text>
+</View>
+`;

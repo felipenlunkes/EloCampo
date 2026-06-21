@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "ba21466a-11b1-427c-9fa3-5eae33a71486",
+    "name": "order-service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44792141",
+    "_collection_link": "https://go.postman.co/collection/44792141-ba21466a-11b1-427c-9fa3-5eae33a71486?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n    \"customerId\": \"019d3152-7112-786e-8676-7977dd9aa275\",\n    \"vendorId\": \"019d3153-525c-7ae9-b587-93d0a9d0414d\",\n    \"productsId\": [\n      {\n        \"productId\": \"11223344-5566-7788-99aa-bbccddeeff00\",\n        \"description\": \"Alface Crespa Orgânica\",\n        \"quantity\": 2,\n        \"price\": 8\n      },\n      {\n        \"productId\": \"aabbccdd-eeff-0011-2233-445566778899\",\n        \"description\": \"Tomate Cereja\",\n        \"quantity\": 3,\n        \"price\": 20\n      }\n    ]\n  }\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{service-url}}/rest/v1/order",
+          "host": [
+            "{{service-url}}"
+          ],
+          "path": [
+            "rest",
+            "v1",
+            "order"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

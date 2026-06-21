@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "EloCampo",
+    "slug": "elocampo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "br.com.elocampo.mobile",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a2e1c"
+      }
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "br.com.elocampo.mobile"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "957a242a-dcea-4cbe-8a48-2b0c5e7deb3a"
+      }
+    },
+    "plugins": [
+      "expo-font",
+      "expo-image-picker"
+    ]
+  }
+}

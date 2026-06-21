@@ -1,0 +1,17 @@
+spring:
+  mongodb:
+    uri: ${MONGODB_URI}
+
+server:
+  port: ${PORT:8080}
+
+cloudinary:
+  cloud-name: ${CLOUDINARY_CLOUD_NAME}
+  api-key: ${CLOUDINARY_API_KEY}
+  api-secret: ${CLOUDINARY_API_SECRET}
+
+services:
+  product-service:
+    url: ${PRODUCT_SERVICE_URL:http://product-service}
+  account-service:
+    url: ${ACCOUNT_SERVICE_URL:http://account-service}

@@ -1,0 +1,37 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+          - id: auth-service
+            uri: ${AUTH_SERVICE_URL:http://auth-service}
+            predicates:
+              - Path=/rest/v1/token,/rest/v1/user/**
+          - id: account-service
+            uri: ${ACCOUNT_SERVICE_URL:http://account-service}
+            predicates:
+              - Path=/rest/v1/account/**
+          - id: product-service
+            uri: ${PRODUCT_SERVICE_URL:http://product-service}
+            predicates:
+              - Path=/rest/v1/product/**
+          - id: order-service
+            uri: ${ORDER_SERVICE_URL:http://order-service}
+            predicates:
+              - Path=/rest/v1/order/**
+          - id: file-service
+            uri: ${FILE_SERVICE_URL:http://file-service}
+            predicates:
+              - Path=/rest/v1/file/**
+          - id: message-service
+            uri: ${MESSAGE_SERVICE_URL:http://message-service}
+            predicates:
+              - Path=/rest/v1/email/**
+          - id: chat-service
+            uri: ${CHAT_SERVICE_URL:http://chat-service}
+            predicates:
+              - Path=/rest/v1/chat/**
+
+server:
+  port: ${PORT:8090}

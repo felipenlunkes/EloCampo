@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: account-service
+  flyway:
+    enabled: false
+  mongodb:
+    auto-index-creation: true
+server:
+  servlet:
+    context-path: /rest
